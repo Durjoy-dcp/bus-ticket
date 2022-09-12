@@ -6,10 +6,12 @@ function check() {
 
 
 }
-function bookTicket() {
-    const e = document.getElementById('fromBus');
-    console.log(e.options[e.selectedIndex].text);
+function bookTicket(id) {
+
+
+    // console.log(e.options[e.selectedIndex].text);
 }
+
 function showDate() {
     let dateString = new Date();
     let actualDate = new Date(dateString);
@@ -28,4 +30,4 @@ const loc = window.location.href.split('/');
 if (loc[loc.length - 1] == 'booking.html') {
     // console.log("here");
     showDate();
-} 
+}
