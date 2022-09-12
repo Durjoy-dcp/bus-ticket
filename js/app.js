@@ -27,7 +27,18 @@ function showDate() {
     }
 }
 const loc = window.location.href.split('/');
-if (loc[loc.length - 1] == 'booking.html') {
-    // console.log("here");
+if (loc[loc.length - 1].split('.')[0] == 'booking') {
+    console.log("here");
     showDate();
+}
+
+
+
+function busSelected() {
+    console.log("working");
+    const seats = document.getElementById('seat');
+    const option = document.createElement('option');
+    option.setAttribute('value', 1);
+    option.innerText = '1';
+    seats.appendChild(option);
 }
