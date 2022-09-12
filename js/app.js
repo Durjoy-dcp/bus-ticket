@@ -36,9 +36,35 @@ if (loc[loc.length - 1].split('.')[0] == 'booking') {
 
 function busSelected() {
     console.log("working");
-    const seats = document.getElementById('seat');
-    const option = document.createElement('option');
-    option.setAttribute('value', 1);
-    option.innerText = '1';
-    seats.appendChild(option);
+    for (let i = 1; i < 4; i++) {
+
+
+        const seats = document.getElementById('seat');
+        const option = document.createElement('option');
+        option.setAttribute('value', i);
+        option.innerText = i;
+        seats.appendChild(option);
+    }
+    getData();
 }
+
+function getData() {
+    let fromBus = document.getElementById('fromBus');
+    const from = fromBus.options[fromBus.selectedIndex].text;
+    let toBus = document.getElementById('toBus');
+    const to = toBus.options[toBus.selectedIndex].text;
+    let dateSelect = document.getElementById('date');
+    const date = dateSelect.options[dateSelect.selectedIndex].text;
+    let timeSelect = document.getElementById('time');
+    const time = timeSelect.options[timeSelect.selectedIndex].text;
+    let busSelect = document.getElementById('bus');
+    const bus = busSelect.options[busSelect.selectedIndex].text;
+    console.log(from);
+    console.log(to);
+    console.log(date);
+    console.log(time);
+    console.log(bus);
+
+    // let datas = localStorage
+}
+document.getElementById('seat').addEventListener('focus', busSelected);
