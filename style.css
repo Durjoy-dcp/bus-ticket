@@ -25,3 +25,8 @@ main {
     min-height: 300px;
 
 }
+
+#sign-in {
+    background-color: rgba(250, 250, 250, 0.95);
+    border-radius: 5px;
+}
