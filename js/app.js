@@ -6,3 +6,7 @@ function check() {
 
 
 }
+function bookTicket() {
+    const e = document.getElementById('fromBus');
+    console.log(e.options[e.selectedIndex].text);
+}
