@@ -29,4 +29,37 @@ main {
 #sign-in {
     background-color: rgba(250, 250, 250, 0.95);
     border-radius: 5px;
+    position: relative;
+    animation: right 2s ease-in 0s 1 alternate-reverse;
+}
+
+@keyframes left {
+    from {
+        left: 0px;
+    }
+
+    to {
+        left: -1000px;
+    }
+}
+
+@keyframes right {
+    from {
+        right: 0px;
+    }
+
+    to {
+        right: -200px;
+    }
+}
+
+#greating {
+    position: relative;
+    animation: left 2s ease-in 0s 1 alternate-reverse;
+
+}
+
+#mid-logo {
+    position: relative;
+    animation: left 2s ease-in 0s 1 alternate-reverse;
 }
