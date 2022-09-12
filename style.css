@@ -26,7 +26,7 @@ main {
 
 }
 
-#sign-in {
+.sign-in {
     background-color: rgba(250, 250, 250, 0.95);
     border-radius: 5px;
     position: relative;
@@ -53,13 +53,9 @@ main {
     }
 }
 
-#greating {
-    position: relative;
-    animation: left 2s ease-in 0s 1 alternate-reverse;
 
-}
 
-#mid-logo {
+.mid-logo {
     position: relative;
     animation: left 2s ease-in 0s 1 alternate-reverse;
 }
