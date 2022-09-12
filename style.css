@@ -1,0 +1,27 @@
+main {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.832), rgba(0, 0, 0, 0.821)), url("images/traffic-vehicle-urban-reflections-city.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 780px;
+
+}
+
+.navbar {
+
+    background-color: #2b2024c4;
+}
+
+.switchnav {
+    color: white;
+}
+
+.switchnav:hover {
+
+    color: red !important;
+}
+
+#midle-part {
+    min-height: 300px;
+
+}
