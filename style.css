@@ -71,5 +71,9 @@ main {
 
 .dropdown-form {
     background-color: #e7e7e7;
-    color: #707070;
+    color: #403f3f;
+}
+
+.mini-text {
+    font-size: 12px;
 }

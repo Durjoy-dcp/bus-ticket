@@ -71,12 +71,12 @@
                     <div class="w-50 sign-in">
 
                         <form class="px-3 py-3">
-                            <div class="mb-5 d-flex justify-content-between">
+                            <div class="mb-2 d-flex justify-content-between">
 
                                 <div class="">
                                     <label for="fromBus" class="form-label fw-bold fs-6">From</label>
                                     <br>
-                                    <select id="fromBus" class="dropdown-form ">
+                                    <select id="fromBus" class="dropdown-form mini-text  ">
                                         <option value="1" selected="selected">Dhaka</option>
                                         <option value="2">Rajshahi</option>
                                         <option value="7">Khulna</option>
@@ -88,7 +88,7 @@
 
                                     <label for="toBus" class="form-label fw-bold fs-6">To</label>
                                     <br>
-                                    <select id="toBus" class="dropdown-form ">
+                                    <select id="toBus" class="dropdown-form mini-text  ">
                                         <option value="1">Dhaka</option>
                                         <option value="2">Rajshahi</option>
                                         <option value="7">Khulna</option>
@@ -98,7 +98,30 @@
                                 </div>
 
                             </div>
+                            <p class="text-dark" style="font-size:13px ;">You can buy ticket for the next 4 days from
+                                today</p>
+                            <div class="mb-2 d-flex justify-content-between">
 
+                                <div class="">
+                                    <label for="date" class="form-label fw-bold fs-6">Date</label>
+                                    <br>
+                                    <select id="date" class="dropdown-form mini-text  ">
+
+                                    </select>
+                                </div>
+                                <div class="">
+
+                                    <label for="time" class="form-label fw-bold fs-6">Time</label>
+                                    <br>
+                                    <select id="time" class="mini-text dropdown-form ">
+                                        <option value="1">9:30 AM</option>
+                                        <option value="2">2:00 PM</option>
+                                        <option value="7">4:00 PM</option>
+                                        <option value="10">9:00 PM</option>
+                                    </select>
+                                </div>
+
+                            </div>
                             <div class="text-center">
 
                                 <button class="btn btn-primary " onclick="bookTicket()">Book Ticket</button>
