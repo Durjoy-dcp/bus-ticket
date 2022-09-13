@@ -1,3 +1,12 @@
+let bus = {
+    from: '',
+    to: '',
+    date: '',
+    time: '',
+    bus: '',
+    seat: ''
+};
+
 function check() {
     const email = document.getElementById('exampleInputEmail1');
     const pass = document.getElementById('exampleInputPassword1');
@@ -8,8 +17,10 @@ function check() {
 }
 function bookTicket(id) {
 
+    let seatSelect = document.getElementById('seat');
+    bus.seat = seatSelect.options[seatSelect.selectedIndex].text;
+    saveDataOnLocalStorage(bus.from, bus.to, bus.date, bus.time, bus.bus, bus.seat);
 
-    // console.log(e.options[e.selectedIndex].text);
 }
 
 function showDate() {
@@ -42,26 +53,23 @@ function busSelected(booked) {
 
 function getData() {
     let fromBus = document.getElementById('fromBus');
-    const from = fromBus.options[fromBus.selectedIndex].text;
+    bus.from = fromBus.options[fromBus.selectedIndex].text;
     let toBus = document.getElementById('toBus');
-    const to = toBus.options[toBus.selectedIndex].text;
+    bus.to = toBus.options[toBus.selectedIndex].text;
     let dateSelect = document.getElementById('date');
-    const date = dateSelect.options[dateSelect.selectedIndex].text;
+    bus.date = dateSelect.options[dateSelect.selectedIndex].text;
     let timeSelect = document.getElementById('time');
-    const time = timeSelect.options[timeSelect.selectedIndex].text;
+    bus.time = timeSelect.options[timeSelect.selectedIndex].text;
     let busSelect = document.getElementById('bus');
-    const bus = busSelect.options[busSelect.selectedIndex].text;
-    // let seatSelect = document.getElementById('seat');
-    // const seat = seatSelect.options[seatSelect.selectedIndex].text;
-    console.log(from);
-    console.log(to);
-    console.log(date);
-    console.log(time);
-    console.log(bus);
+    bus.bus = busSelect.options[busSelect.selectedIndex].text;
+    // console.log(from);
+    // console.log(to);
+    // console.log(date);
+    // console.log(time);
+    // console.log(bus);
 
-    // saveDataOnLocalStorage(from, to, date, time, bus, seat);
     let tickets = getDataFromLocalstorage();
-    let seats = tickets.filter(x => x.fromBus == from && x.toBus == to && x.date == date && x.time == time && x.bus == bus).map(x => x.seat);
+    let seats = tickets.filter(x => x.fromBus == bus.from && x.toBus == bus.to && x.date == bus.date && x.time == bus.time && x.bus == bus.bus).map(x => x.seat);
     console.log(seats);
     const seatsField = document.getElementById('seat');
     seatsField.innerText = '';
@@ -80,7 +88,8 @@ function getData() {
 
     }
 
-    // let datas = localStorage
+
+
 }
 document.getElementById('seat').addEventListener('focus', busSelected);
 function getDataFromLocalstorage() {
