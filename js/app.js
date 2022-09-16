@@ -106,3 +106,25 @@ function saveDataOnLocalStorage(from, to, date, time, bus, seat) {
     localStorage.setItem('tickets', JSON.stringify(seats));
 }
 
+function showBooked() {
+    const container = document.getElementById('display-booked');
+    for (let i = 1; i <= 40; i = i + 4) {
+
+        const div = document.createElement('div');
+        div.classList.add('row');
+        div.innerHTML = `<div class="col-3">
+        <div class="bg-success px-2 m-2">${i}</div>
+    </div>
+    <div class="col-3">
+        <div class="bg-success px-2 m-2">${i + 1}</div>
+    </div>
+    <div class="col-3">
+        <div class="bg-success px-2 m-2">${i + 2}</div>
+    </div>
+    <div class="col-3">
+        <div class="bg-success px-2 m-2">${i + 3}</div>
+    </div>`
+        container.appendChild(div);
+    }
+}
+showBooked();
