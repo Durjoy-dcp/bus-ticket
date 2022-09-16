@@ -79,3 +79,15 @@ main {
 .mini-text {
     font-size: 12px;
 }
+
+#display-booked {
+    background-color: aliceblue;
+
+}
+
+.show-seats {
+    background-color: green;
+    /* padding: 5px 10px;
+    width: 25%; */
+
+}

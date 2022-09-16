@@ -39,7 +39,7 @@ function showDate() {
 }
 const loc = window.location.href.split('/');
 if (loc[loc.length - 1].split('.')[0] == 'booking') {
-    console.log("here");
+    // console.log("here");
     showDate();
 }
 
@@ -105,3 +105,4 @@ function saveDataOnLocalStorage(from, to, date, time, bus, seat) {
     seats.push({ fromBus: from, toBus: to, date: date, time: time, bus: bus, seat: seat });
     localStorage.setItem('tickets', JSON.stringify(seats));
 }
+
