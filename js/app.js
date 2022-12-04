@@ -7,14 +7,19 @@ let bus = {
     seat: ''
 };
 
-function check() {
+function check(event) {
+    console.log(event)
+    event.preventDefault()
     const email = document.getElementById('exampleInputEmail1');
     const pass = document.getElementById('exampleInputPassword1');
-    console.log("its working ");
-    window.location.href = 'booking.html';
-
+    if (email && pass) {
+        window.location.href = 'booking.html';
+        console.log(window.location.href)
+        console.log('working')
+    }
 
 }
+
 function bookTicket(id) {
 
     let seatSelect = document.getElementById('seat');
@@ -47,7 +52,6 @@ if (loc[loc.length - 1].split('.')[0] == 'booking') {
 
 function busSelected(booked) {
     console.log("working");
-
     getData();
 }
 
