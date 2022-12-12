@@ -12,10 +12,15 @@ function check(event) {
     event.preventDefault()
     const email = document.getElementById('exampleInputEmail1');
     const pass = document.getElementById('exampleInputPassword1');
-    if (email && pass) {
+    // console.log(email.value, pass.value)
+    if (email.value === 'user@gmail.com' && pass.value === 'bangladesh') {
         window.location.href = 'booking.html';
         console.log(window.location.href)
         console.log('working')
+    } else {
+        alert("Wrong User!")
+        console.log(event)
+        event.target.reset();
     }
 
 }
