@@ -29,7 +29,8 @@ function bookTicket(id) {
 
     let seatSelect = document.getElementById('seat');
     bus.seat = seatSelect.options[seatSelect.selectedIndex].text;
-    const Ans = prompt(`You are going to book ticket for From: ${bus.from} To: ${bus.to} on ${bus.date} at ${bus.time} in ${bus.bus} .Seat No: ${bus.seat}`)
+    const Ans = confirm(`You are going to book ticket for From: ${bus.from} To: ${bus.to} on ${bus.date} at ${bus.time} in ${bus.bus} .Seat No: ${bus.seat}`)
+    console.log(Ans)
     if (Ans) {
         saveDataOnLocalStorage(bus.from, bus.to, bus.date, bus.time, bus.bus, bus.seat);
     }
